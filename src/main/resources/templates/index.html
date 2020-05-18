@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+<table class="table">
+    <thead class="thead-dark">
+    <th scope="col">varietyComputers</th>
+    <th scope="cpu">cpu</th>
+    <th scope="ozu">ozu</th>
+    <th scope="motherboard">motherboard</th>
+    <th scope="disk">disk</th>
+    <th scope="gpu">gpu</th>
+    <th scope="monitor">monitor</th>
+    </thead>
+    <tr th:each="item : ${devices}">
+        <td th:text="${item.varietyComputers}"></td>
+        <td th:text="${item.cpu}"></td>
+        <td th:text="${item.ozu}"></td>
+        <td th:text="${item.motherboard}"></td>
+        <td th:text="${item.disk}"></td>
+        <td th:text="${item.gpu}"></td>
+        <td th:text="${item.monitor}"></td>
+    </tr>
+</table>>
+</body>
+</html>
